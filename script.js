@@ -14,7 +14,7 @@
                 answ=answ+"<input type='radio' value='"+key+"' name='rad'>"+this.answers[key]+"<br>";
             }
             else{
-                answ="<input type='radio' value='"+key+"' name='rad'>"+this.answers[key]+"<br>";
+                answ="<input type='radio' value='"+key+"' name='rad' checked>"+this.answers[key]+"<br>";
             }
             
         }
@@ -49,5 +49,5 @@
     questions[n].displayQuestion();
     var answer=document.querySelector('input[name="rad"]:checked').value;
     console.log(n+' '+answer);
-    // questions[n].checkAnswer(answer);
+    questions[n].checkAnswer(answer);
 })();
