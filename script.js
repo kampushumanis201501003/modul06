@@ -7,11 +7,18 @@
 
     Question.prototype.displayQuestion = function() {
         document.getElementById('soal').innerHTML=this.question;
-
+        var answ;
         for (let key in this.answers) {
             //console.log(key + ': ' + this.answers[key]);
+            if(answ){
+                answ=answ+"<input type='radio' value='"+key+"' name='rad'>"+this.answers[key]+"<br>";
+            }
+            else{
+                answ="<input type='radio' value='"+key+"' name='rad'>"+this.answers[key]+"<br>";
+            }
             
         }
+        document.getElementById('answer').innerHTML=answ;
     }
 
     Question.prototype.checkAnswer = function(ans) {
@@ -40,8 +47,7 @@
     var n = Math.floor(Math.random() * questions.length);
 
     questions[n].displayQuestion();
-
-    var answer = parseInt(prompt('Pilih jawaban yang bener.'));
-
-    questions[n].checkAnswer(answer);
+    var answer=document.querySelector('input[name="rad"]:checked').value;
+    console.log(n+' '+answer);
+    // questions[n].checkAnswer(answer);
 })();
