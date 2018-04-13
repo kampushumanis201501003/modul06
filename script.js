@@ -8,17 +8,18 @@
     Question.prototype.displayQuestion = function() {
         document.getElementById('soal').innerHTML=this.question;
 
-        for (var i = 0; i < this.answers.length; i++) {
-            console.log(i + ': ' + this.answers[i]);
+        for (let key in this.answers) {
+            //console.log(key + ': ' + this.answers[key]);
+            
         }
     }
 
     Question.prototype.checkAnswer = function(ans) {
         if (ans === this.correct) {
-            console.log('Jawaban benar!');
-
+            // console.log('Jawaban benar!');
+            alert('Jawaban benar!');
         } else {
-            console.log('SALAH. coba lagi :)')
+            alert('SALAH. coba lagi :)');
         }
     }
 
