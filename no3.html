@@ -9,7 +9,16 @@
 <body>
     <a href="index.html">Kembali</a>
     <script>
+        var obj={name:"Agus"};
+        var greeting=function(a,b,c){
+            return "Selamat datang "+this.name+" ke "+a+" "+b+" di "+c;
+        };
+        console.log(greeting.call(obj,"Tambakreja","Cilacap","Jawa Tengah"));
         
+        // var bound=greeting.bind(obj);
+        // console.dir(bound);
+        // console.log("Output using .bind() below");
+        // console.log(bound("Tambakreja","Cilacap","Jawa Tengah"));
     </script>
 </body>
 </html>
