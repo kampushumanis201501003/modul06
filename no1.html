@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soal 1</title>
+</head>
+<body>
+    <a href="index.html">Kembali</a>
+    <script>
+        var pesawat={
+            setSayap:function(n){
+                this.sayap=n;
+                return this;
+            },
+            setRoda:function(n){
+                this.roda=n;
+                return this;
+            },
+            setPenumpang:function(n){
+                this.penumpang=n;
+                return this;
+            },
+            lepasLandas:function(){
+                console.log("Pesawat beerisi "+this.penumpang+" orang");
+                console.log("Pesawat memiliki "+this.sayap+" buah sayap !");
+                console.log("Pesawat memiliki "+this.roda+" buah roda!");
+                console.log("Pesawat lepas landas");
+            }
+        };
+        pesawat.setSayap(2).setRoda(3).setPenumpang(200).lepasLandas();
+    </script>
+</body>
+</html>
