@@ -8,5 +8,23 @@
 </head>
 <body>
     <a href="index.html">Kembali</a>
+    <script>
+        const Orang=(nama,gender,tanggallahir)=>{
+            let namaSaya=nama,tanggallahirSaya=new Date(tanggallahir);
+            const genderSaya=gender;
+            return{
+                setNama:(namaBaru)=>namaSaya=namaBaru,
+                nama: ()=>namaSaya,
+                gender:(genderSaya)?'Laki-laki':'Perempuan',
+                usia:()=>(new Date()).getFullYear()-tanggallahirSaya.getFullYear()
+            }
+        }
+        const agus=Orang('Agus',1,'1995-10-21');
+        console.log(agus.nama());
+        console.log(agus.gender());
+        console.log(agus.usia());
+        console.log(agus.setNama('Agustinus'));
+        console.log(agus.nama());
+    </script>
 </body>
 </html>
