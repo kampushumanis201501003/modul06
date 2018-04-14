@@ -21,7 +21,6 @@
     }
 
     Question.prototype.checkAnswer = function(ans) {
-        console.log(ans+' '+this.correct);
         if (ans === this.correct) {
             // console.log('Jawaban benar!');
             alert('Jawaban benar!');
@@ -50,8 +49,8 @@
     console.log(n);
     var answer;
     document.getElementById('jwb').addEventListener('click',function(){
-        answer=document.getElementById('ok')['rad'].value;
-        //questions[n].checkAnswer(answer);
+        answer=parseInt(document.getElementById('ok')['rad'].value);
+        questions[n].checkAnswer(answer);
         console.log(answer+' '+n);
     })
 })();
