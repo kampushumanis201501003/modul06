@@ -15,7 +15,7 @@
             return{
                 setNama:(namaBaru)=>namaSaya=namaBaru,
                 nama: ()=>namaSaya,
-                gender:(genderSaya)?'Laki-laki':'Perempuan',
+                gender:()=>(genderSaya)?'Laki-laki':'Perempuan',
                 usia:()=>(new Date()).getFullYear()-tanggallahirSaya.getFullYear()
             }
         }
