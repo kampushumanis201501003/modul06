@@ -17,10 +17,11 @@
                 answ="<input type='radio' value='"+key+"' name='rad' checked>"+this.answers[key]+"<br>";
             }
         }
-        document.getElementById('answer').innerHTML=answ;
+        document.getElementById('pg').innerHTML=answ;
     }
 
     Question.prototype.checkAnswer = function(ans) {
+        console.log(ans+' '+this.correct);
         if (ans === this.correct) {
             // console.log('Jawaban benar!');
             alert('Jawaban benar!');
@@ -46,7 +47,11 @@
     var n = Math.floor(Math.random() * questions.length);
 
     questions[n].displayQuestion();
-    var answer=document.querySelector('input[name="rad"]:checked').value;
-    console.log(n+' '+answer);
-    questions[n].checkAnswer(answer);
+    console.log(n);
+    var answer;
+    document.getElementById('jwb').addEventListener('click',function(){
+        answer=document.getElementById('ok')['rad'].value;
+        //questions[n].checkAnswer(answer);
+        console.log(answer+' '+n);
+    })
 })();
