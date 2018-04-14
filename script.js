@@ -16,7 +16,6 @@
             else{
                 answ="<input type='radio' value='"+key+"' name='rad' checked>"+this.answers[key]+"<br>";
             }
-            
         }
         document.getElementById('answer').innerHTML=answ;
     }
