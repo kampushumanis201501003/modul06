@@ -8,10 +8,11 @@
 </head>
 <body>
     <table border="1">
-        <th>Nomor</th>
-        <th>Jawaban</th>
-        <div id="jawaban">
-        </div>
+        <thead>
+                <th>Nomor</th>
+                <th>Jawaban</th>
+        </thead>
+        <tbody id="jawaban"></tbody>
     </table>
 </body>
 <script>
@@ -19,6 +20,13 @@
     var jadi;
     for(let key in soal){
         //console.log(soal[key]);
+        if(jadi){
+            jadi=jadi+"<tr><td>"+soal[key]+"</td><td><a href='no"+soal[key]+".html'>Nomor "+soal[key]+"</td></tr>";
+        }
+        else{
+            jadi="<tr><td>"+soal[key]+"</td><td><a href='no"+soal[key]+".html'>Nomor "+soal[key]+"</td></tr>";
+        }
     }
+    document.getElementById('jawaban').innerHTML=jadi;
 </script>
 </html>
