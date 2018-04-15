@@ -28,26 +28,26 @@
             alert('SALAH. coba lagi :)');
         }
     }
-
-    var q1 = new Question('Apakah JavaScript bahasa pemrograman paling keren sedunia?',
+    var questions = [];
+    questions[0]= new Question('Apakah JavaScript bahasa pemrograman paling keren sedunia?',
                           ['Ya', 'Enggak'],
                           0);
 
-    var q2 = new Question('Siapa nama dosen yang mengajar kuliah ini ?',
+    questions[1]= new Question('Siapa nama dosen yang mengajar kuliah ini ?',
                           ['John', 'Micheal', 'Oskar'],
                           2);
 
-    var q3 = new Question('Kata yang paling bagus mendeskripsikan koding',
+    questions[2]= new Question('Kata yang paling bagus mendeskripsikan koding',
                           ['Bosen', 'Susah', 'Membahagiakan', 'Membosenkan'],
                           2);
-    var q4 = new Question('Dimana Kampus STIKOM Yos Sudarso berada ?',
+    questions[3]= new Question('Dimana Kampus STIKOM Yos Sudarso berada ?',
                           ['Purwokerto', 'Puetorico', 'Purworejo', 'Purwakarta'],
                           0);
-    var q5 = new Question('Kampus profesional , humanis ,serta berwawasan ...',
+    questions[4]= new Question('Kampus profesional , humanis ,serta berwawasan ...',
                           ['Teknologi', 'Lingkungan', 'Luas', 'Agama'],
                           2);
 
-    var questions = [q1, q2, q3];
+    
 
     var n = Math.floor(Math.random() * questions.length);
 
