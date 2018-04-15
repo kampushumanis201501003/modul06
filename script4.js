@@ -1,14 +1,11 @@
-var score;
-function skor(){
-    if(score){
-        score+=1;
-    }
-    else{
-        score=1;
-    }
-    return score;
-}
 (function() {
+    var score=0;
+    function tmbah(n){
+        n+=1;
+        return n;
+    }
+    score=tmbah(score);
+    console.log(tmbah(0)+' s');
     function Question(question, answers, correct) {
         this.question = question;
         this.answers = answers;
@@ -34,8 +31,7 @@ function skor(){
             alert('Jawaban benar! ');
         }
         else if(ans=='exit'){
-            document.location='index.html';
-            alert('Anda Keluar dari Permainan');
+            confirm('Anda Keluar dari Permainan');
         }
         else {
             alert('SALAH. coba lagi :)');
@@ -67,10 +63,13 @@ function skor(){
     document.getElementById('jwb').addEventListener('click',function(){
         answer=parseInt(document.getElementById('ok')['rad'].value);
         questions[n].checkAnswer(answer);
-        // console.log(answer+' '+n);
+        // if(answer===questions[n].correct){
+        //     score=tmbah(score);
+        // }
     });
     document.getElementById('exit').addEventListener('click',function(){
         questions[n].checkAnswer('exit');
         // console.log(answer+' '+n);
     });
+    document.getElementById('score').innerHTML='Skor anda '+score;
 })();
