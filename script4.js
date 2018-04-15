@@ -1,3 +1,4 @@
+var score;
 (function() {
     function Question(question, answers, correct) {
         this.question = question;
@@ -19,11 +20,11 @@
         }
         document.getElementById('pg').innerHTML=answ;
     }
-
     Question.prototype.checkAnswer = function(ans) {
         if (ans === this.correct) {
             // console.log('Jawaban benar!');
             alert('Jawaban benar!');
+            score=score+5;
         } else {
             alert('SALAH. coba lagi :)');
         }
@@ -46,7 +47,7 @@
     questions[4]= new Question('Kampus profesional , humanis ,serta berwawasan ...',
                           ['Teknologi', 'Lingkungan', 'Luas', 'Agama'],
                           1);
-                          
+
     var n = Math.floor(Math.random() * questions.length);
 
     questions[n].displayQuestion();
@@ -55,6 +56,7 @@
     document.getElementById('jwb').addEventListener('click',function(){
         answer=parseInt(document.getElementById('ok')['rad'].value);
         questions[n].checkAnswer(answer);
-        console.log(answer+' '+n);
+        // console.log(answer+' '+n);
     })
 })();
+document.getElementById('score').innerHTML="Skor anda "+score;
