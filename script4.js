@@ -1,11 +1,10 @@
-var score;
+
 (function() {
     function Question(question, answers, correct) {
         this.question = question;
         this.answers = answers;
         this.correct = correct;
     }
-
     Question.prototype.displayQuestion = function() {
         document.getElementById('soal').innerHTML=this.question;
         var answ;
@@ -22,15 +21,19 @@ var score;
     }
     Question.prototype.checkAnswer = function(ans) {
         if (ans === this.correct) {
-            // console.log('Jawaban benar!');
-            alert('Jawaban benar!');
+            // console.log('Jawaban benar!'+score);
             if(score){
-                score=score+5;
+                score+=5;
             }
             else{
                 score=5;
             }
-        } else {
+            alert('Jawaban benar!');
+        }
+        else if(ans=='exit'){
+            
+        }
+        else {
             alert('SALAH. coba lagi :)');
         }
     }
@@ -54,7 +57,6 @@ var score;
                           1);
 
     var n = Math.floor(Math.random() * questions.length);
-
     questions[n].displayQuestion();
     console.log(n);
     var answer;
@@ -62,6 +64,9 @@ var score;
         answer=parseInt(document.getElementById('ok')['rad'].value);
         questions[n].checkAnswer(answer);
         // console.log(answer+' '+n);
-    })
+    });
+    document.getElementById('exit').addEventListener('click',function(){
+        questions[n].checkAnswer('exit');
+        // console.log(answer+' '+n);
+    });
 })();
-document.getElementById('score').innerHTML="Skor anda "+score;
