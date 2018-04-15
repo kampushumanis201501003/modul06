@@ -1,4 +1,13 @@
-
+var score;
+function skor(){
+    if(score){
+        score+=1;
+    }
+    else{
+        score=1;
+    }
+    return score;
+}
 (function() {
     function Question(question, answers, correct) {
         this.question = question;
@@ -22,13 +31,7 @@
     Question.prototype.checkAnswer = function(ans) {
         if (ans === this.correct) {
             // console.log('Jawaban benar!'+score);
-            if(score){
-                score=score+1;
-            }
-            else{
-                score=1;
-            }
-            alert('Jawaban benar! '+score);
+            alert('Jawaban benar! ');
         }
         else if(ans=='exit'){
             document.location='index.html';
