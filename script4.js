@@ -24,7 +24,12 @@ var score;
         if (ans === this.correct) {
             // console.log('Jawaban benar!');
             alert('Jawaban benar!');
-            score=score+5;
+            if(score){
+                score=score+5;
+            }
+            else{
+                score=5;
+            }
         } else {
             alert('SALAH. coba lagi :)');
         }
