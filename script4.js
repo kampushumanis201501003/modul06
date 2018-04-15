@@ -40,6 +40,12 @@
     var q3 = new Question('Kata yang paling bagus mendeskripsikan koding',
                           ['Bosen', 'Susah', 'Membahagiakan', 'Membosenkan'],
                           2);
+    var q4 = new Question('Kata yang paling bagus mendeskripsikan koding',
+                          ['Bosen', 'Susah', 'Membahagiakan', 'Membosenkan'],
+                          2);
+    var q3 = new Question('Kata yang paling bagus mendeskripsikan koding',
+                          ['Bosen', 'Susah', 'Membahagiakan', 'Membosenkan'],
+                          2);
 
     var questions = [q1, q2, q3];
 
