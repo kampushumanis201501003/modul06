@@ -23,15 +23,16 @@
         if (ans === this.correct) {
             // console.log('Jawaban benar!'+score);
             if(score){
-                score+=5;
+                score=score+1;
             }
             else{
-                score=5;
+                score=1;
             }
-            alert('Jawaban benar!');
+            alert('Jawaban benar! '+score);
         }
         else if(ans=='exit'){
-            
+            document.location='index.html';
+            alert('Anda Keluar dari Permainan');
         }
         else {
             alert('SALAH. coba lagi :)');
