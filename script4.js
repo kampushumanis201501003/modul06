@@ -40,11 +40,11 @@
     var q3 = new Question('Kata yang paling bagus mendeskripsikan koding',
                           ['Bosen', 'Susah', 'Membahagiakan', 'Membosenkan'],
                           2);
-    var q4 = new Question('Kata yang paling bagus mendeskripsikan koding',
-                          ['Bosen', 'Susah', 'Membahagiakan', 'Membosenkan'],
-                          2);
-    var q3 = new Question('Kata yang paling bagus mendeskripsikan koding',
-                          ['Bosen', 'Susah', 'Membahagiakan', 'Membosenkan'],
+    var q4 = new Question('Dimana Kampus STIKOM Yos Sudarso berada ?',
+                          ['Purwokerto', 'Puetorico', 'Purworejo', 'Purwakarta'],
+                          0);
+    var q5 = new Question('Kampus profesional , humanis ,serta berwawasan ...',
+                          ['Teknologi', 'Lingkungan', 'Luas', 'Agama'],
                           2);
 
     var questions = [q1, q2, q3];
