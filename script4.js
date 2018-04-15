@@ -46,9 +46,7 @@
     questions[4]= new Question('Kampus profesional , humanis ,serta berwawasan ...',
                           ['Teknologi', 'Lingkungan', 'Luas', 'Agama'],
                           1);
-
-    
-
+                          
     var n = Math.floor(Math.random() * questions.length);
 
     questions[n].displayQuestion();
