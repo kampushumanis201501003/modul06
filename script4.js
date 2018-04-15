@@ -45,7 +45,7 @@
                           0);
     questions[4]= new Question('Kampus profesional , humanis ,serta berwawasan ...',
                           ['Teknologi', 'Lingkungan', 'Luas', 'Agama'],
-                          2);
+                          1);
 
     
 
