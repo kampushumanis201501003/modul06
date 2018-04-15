@@ -5,7 +5,7 @@
         return n;
     }
     score=tmbah(score);
-    console.log(tmbah(0)+' s');
+    console.log(tmbah(score)+' s');
     function Question(question, answers, correct) {
         this.question = question;
         this.answers = answers;
