@@ -13,8 +13,9 @@
         var greeting=function(a,b,c){
             return "Selamat datang "+this.name+" ke "+a+" "+b+" di "+c;
         };
+        //Cara 1
         console.log(greeting.call(obj,"Tambakreja","Cilacap","Jawa Tengah"));
-        
+        //Cara 2
         var bound=greeting.bind(obj);
         console.dir(bound);
         console.log("Output using .bind() below");
