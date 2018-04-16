@@ -1,11 +1,4 @@
 (function() {
-    var score=0;
-    function tmbah(n){
-        n+=1;
-        return n;
-    }
-    score=tmbah(score);
-    console.log(tmbah(score)+' s');
     function Question(question, answers, correct) {
         this.question = question;
         this.answers = answers;
@@ -32,6 +25,7 @@
         }
         else if(ans=='exit'){
             confirm('Anda Keluar dari Permainan');
+            exit();
         }
         else {
             alert('SALAH. coba lagi :)');
@@ -71,5 +65,11 @@
         questions[n].checkAnswer('exit');
         // console.log(answer+' '+n);
     });
-    document.getElementById('score').innerHTML='Skor anda '+score;
+    // document.getElementById('score').innerHTML='Skor anda '+score;
 })();
+function exit(){
+    document.getElementById('soal').style.visibility='hidden';
+    document.getElementById('pg').style.visibility='hidden';
+    document.getElementById('jwb').style.visibility='hidden';
+    document.getElementById('score').innerHTML='Anda Sudah tidak bermain';
+}
