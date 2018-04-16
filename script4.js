@@ -63,7 +63,6 @@ var skor=(function() {
         // console.log(answer+' '+n);
     });
     document.getElementById('mulai').style.visibility='hidden';
-    return skore;
 })();
 function exit(){
     document.getElementById('soal').style.visibility='hidden';
