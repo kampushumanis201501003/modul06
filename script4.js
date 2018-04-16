@@ -1,4 +1,4 @@
-(function() {
+var skor=(function() {
     function Question(question, answers, correct) {
         this.question = question;
         this.answers = answers;
@@ -57,16 +57,13 @@
     document.getElementById('jwb').addEventListener('click',function(){
         answer=parseInt(document.getElementById('ok')['rad'].value);
         questions[n].checkAnswer(answer);
-        // if(answer===questions[n].correct){
-        //     score=tmbah(score);
-        // }
     });
     document.getElementById('exit').addEventListener('click',function(){
         questions[n].checkAnswer('exit');
         // console.log(answer+' '+n);
     });
     document.getElementById('mulai').style.visibility='hidden';
-    // document.getElementById('score').innerHTML='Skor anda '+score;
+    return skore;
 })();
 function exit(){
     document.getElementById('soal').style.visibility='hidden';
