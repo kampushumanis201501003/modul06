@@ -4,6 +4,7 @@ var skor=(function() {
         this.answers = answers;
         this.correct = correct;
     }
+    //var skoree=0;
     Question.prototype.displayQuestion = function() {
         document.getElementById('soal').innerHTML=this.question;
         var answ;
@@ -22,6 +23,7 @@ var skor=(function() {
         if (ans === this.correct) {
             // console.log('Jawaban benar!'+score);
             alert('Jawaban benar! ');
+            //skore++;
         }
         else if(ans=='exit'){
             confirm('Anda Keluar dari Permainan');
@@ -63,7 +65,7 @@ var skor=(function() {
         // console.log(answer+' '+n);
     });
     document.getElementById('mulai').style.visibility='hidden';
-    return skore;
+    // return skore;
 })();
 function exit(){
     document.getElementById('soal').style.visibility='hidden';
@@ -76,4 +78,4 @@ function exit(){
     });
     document.getElementById('score').innerHTML='Anda Sudah tidak bermain';
 }
-alert(skor);
+// alert(skor);
