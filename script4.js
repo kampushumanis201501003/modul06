@@ -65,11 +65,17 @@
         questions[n].checkAnswer('exit');
         // console.log(answer+' '+n);
     });
+    document.getElementById('mulai').style.visibility='hidden';
     // document.getElementById('score').innerHTML='Skor anda '+score;
 })();
 function exit(){
     document.getElementById('soal').style.visibility='hidden';
     document.getElementById('pg').style.visibility='hidden';
     document.getElementById('jwb').style.visibility='hidden';
+    var mulai=document.getElementById('mulai');
+    mulai.style.visibility='visible';
+    mulai.addEventListener('click',function(){
+        location.reload();
+    });
     document.getElementById('score').innerHTML='Anda Sudah tidak bermain';
 }
